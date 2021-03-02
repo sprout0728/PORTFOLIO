@@ -1,0 +1,354 @@
+<!DOCTYPE html>  
+<html>
+	<head>
+		<meta charset="utf-8"> 
+				<title>sidemol</title>
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+							<link rel="shortcut icon" href="img/favicon.ico">
+							<link href="css/index.css" rel="stylesheet" type="text/css">
+             	<link href="css/slick-theme.css" rel="stylesheet" type="text/css"> 
+							<link href="css/slick.css" rel="stylesheet" type="text/css"> 
+                                <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>          
+								<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+								<script type="text/javascript" src="js/slick.min.js"></script>
+								<script type="text/javascript">
+									$(function(){
+										$('#contents1').slick(
+											{
+												dots: true,
+												infinite: true,
+												autoplay: true,
+  											autoplaySpeed: 4000,
+											});
+										$('#contents1_2').slick(
+											{
+												dots: true,
+												infinite: true,
+												autoplay: true,
+  											autoplaySpeed: 4000,
+											});
+										$('#eventBnr').slick(
+											{
+												dots: true,
+												infinite: true,
+												autoplay: true,
+  											autoplaySpeed: 3000,
+											});
+									
+									})
+									$(function() {
+        function slideMenu() {
+            var activeState = $("#menu-container .menu-list").hasClass("active");
+            $("#menu-container .menu-list").animate({left: activeState ? "0%" : "-100%"}, 400);
+        }
+        $("#menu-wrapper").click(function(event) {
+            event.stopPropagation();
+            $("#hamburger-menu").toggleClass("open");
+            $("#menu-container .menu-list").toggleClass("active");
+            slideMenu();
+
+            $("body").toggleClass("overflow-hidden");
+        });
+
+        $(".menu-list").find(".accordion-toggle").click(function() {
+            $(this).next().toggleClass("open").slideToggle("fast");
+            $(this).toggleClass("active-tab").find(".menu-link").toggleClass("active");
+
+            $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
+            $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
+        });
+    }); // jQuery load
+									
+								</script>
+	</head>
+	<body>
+			<div id="wrap">
+					<header>
+							<div id="header">
+								<div id="header_t_m">
+									<div id=nav_logo_t_m>
+											<a href="#" target="_self">
+													<img src="img/header_logo.png" width="100%" alt="로고" class="nav_logo">
+											</a>
+									</div>
+									<div id="menu-container">
+            <div id="menu-wrapper">
+                <div id="hamburger-menu">
+                    <span></span><span></span><span></span>
+                </div>
+                <!-- hamburger-menu -->
+            </div>
+            <!-- menu-wrapper -->
+            <ul class="menu-list accordion">
+                <li id="nav1" class="toggle accordion-toggle"> 
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">BREND</a>
+                </li>
+                <ul class="menu-submenu accordion-content">
+                    <li><a class="head" href="#">BRENDSTORY</a></li>
+                </ul> 
+                <li id="nav2" class="toggle accordion-toggle"> 
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">PRODUCTS</a>
+                </li>
+                    <ul class="menu-submenu accordion-content">
+<!--
+                        <li><a class="head" href="#">Submenu1</a></li>
+                        <li><a class="head" href="#">Submenu2</a></li>
+-->
+                    </ul>
+                <li id="nav3" class="toggle accordion-toggle"> 
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">REVIEW</a>
+                </li>
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="#">PHOTO REVIEW</a></li>
+                        <li><a class="head" href="#">SNS REVIEW</a></li>
+                    </ul>
+                <li id="nav4" class="toggle accordion-toggle"> 
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">Cscenter</a>
+                </li>
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="#">FAQ</a></li>
+                        <li><a class="head" href="#">1:1문의</a></li>
+                    </ul>
+                <li id="nav4" class="toggle accordion-toggle"> 
+                    <span class="icon-plus"></span>
+                    <a class="menu-link" href="#">COMMUNITY</a>
+                </li>
+                    <ul class="menu-submenu accordion-content">
+                        <li><a class="head" href="#">시사모 자유게시판</a></li>
+                    </ul>
+            </ul>
+            <!-- menu-list accordion-->
+        </div>
+
+                                    
+                                    
+								</div>
+							<div id="header_pc">
+									<nav>
+										<ul id="snbMenu">
+											<li><a href="#">로그인</a></li>
+											<li>｜</li>
+											<li><a href="#">회원가입</a></li>
+											<li>｜</li>
+											<li><a href="#">마이페이지</a></li>
+											<li>｜</li>
+											<li><a href="#">배송조회</a></li>
+											<li>｜</li>
+											<li><a href="#">장바구니</a></li>
+										</ul>
+									</nav>
+									<div id="ico_sns">
+										<a href="#" target="_self">
+											<img src="img/ico_facebook.png" width="27px" alt="sns">
+										</a>
+										<a href="#" target="_self">
+											<img src="img/ico_insta.png" width="28px"
+											alt="sns">
+										</a>
+										<a href="#" target="_self">
+											<img src="img/ico_utube.png" width="28px" alt="sns">
+										</a>
+										<a href="#" target="_self">
+											<img src="img/ico_blog.png" width="35px" alt="sns">
+										</a>
+									</div>
+									<a href="#" target="_self">
+										<img src="img/logo.png" width="200px" alt="logo" id="pcLogo">
+									</a>
+									<div id="search_box">
+										<input type="search" title="search" id="search">
+										<img src="img/ico_search.png" width="20px" alt="검색아이콘" id="ico_search">
+									</div>
+									<nav>
+										<ul class="pc_main_menu">
+											<li><a href="#">Brand</a></li>
+											<li><a href="#">Products</a></li>
+											<li><a href="#">Review</a></li>
+											<li><a href="#">Cscenter</a></li>
+											<li><a href="#">Community</a></li>
+											<div id="menu_line"></div>
+										</ul>
+									</nav>
+							</div>
+						</div>
+					</header>
+					<container>
+							<div id="contents1">
+								<div class="bnr_main_m_t">
+											<a href="#" target="_self">
+												<img src="img/bnr_main(1)_m_t.jpg" width="100%" alt="메인배너">
+											</a>
+									</div>
+									<div class="bnr_main_m_t">
+											<a href="#" target="_self">
+												<img src="img/bnr_main(2)_m_t.jpg" width="100%" alt="메인배너2">
+											</a>
+									</div>
+							</div>
+							<div id="contents1_2">
+									<div class="bnr_main_pc">
+										<a href="#" target="_self">
+											<img src="img/bnr_main(1)_pc.jpg" width="100%" alt="메인배너">
+										</a>
+									</div>
+									<div class="bnr_main_pc">
+										<a href="#" target="_self">
+											<img src="img/bnr_main(2)_pc.jpg" width="100%" alt="메인배너2">
+										</a>
+									</div>
+						  </div>
+							<div id="contents2">
+									<div id="contentsBnr">
+										<div id="brandstory">
+												<a href="#" target="_self">
+													<img src="img/img_main_contents1bnr_1.jpg" width="100%" alt="브랜드스토리" class="contents2_bnr">
+													<img src="img/img_main_contents1bnr_1_front.jpg" width="100%" alt="브랜드스토리" class="contents2_bnr_front">
+												</a>
+										</div>
+												<a href="#" target="_self">
+													<img src="img/img_main_contents1bnr_2.jpg" width="100%" alt="시드물 성분사전">
+												</a>
+												<a href="#" target="_self">
+													<img src="img/img_main_contents1bnr_5.jpg" width="100%" alt="신상품"
+													class="contents3_bnr">
+												</a>
+									</div>
+									<div id="eventBnr">
+												<a href="#" target="_self">
+													<img src="img/img_main_contents1bnr_3.jpg" width="100%" alt="이벤트">
+												</a>
+												<a href="#" target="_self">
+													<img src="img/img_main_contents1bnr_4.jpg" width="100%" alt="이벤트">
+												</a>
+									</div>
+							</div>
+							<div id="bnr">
+								
+							</div>
+							<div id="contents3">
+								<p id="tit_contents3_title"> BEST SELLERS</p>
+								<img src="img/best_m.jpg" width="100%" id="best">
+ 								<div id="contents3_product">
+									<a href="#" target="_self">
+										<ul class="best_product1">
+										
+												<li><img src="img/img_main_contents2bestitem_1.png" width="100%" alt="best상품"></li>
+												<li>센텔라립 에센스</li>
+
+										</ul>
+									</a>
+										
+									
+									<a href="#" target="_self">
+										<ul class="best_product1">
+										
+											<li><img src="img/img_main_contents2bestitem_2.png" width="100%"alt="best상품">
+											<li>이베데논 탄력 앰플</li>
+										</ul>
+										
+									</a>
+									<a href="#" target="_self">
+										<ul class="best_product1">
+										
+											<li><img src="img/img_main_contents2bestitem_3.png" width="100%" alt="best상품"></li>
+											<li>닥터트럽 하이드로겔</li>
+										</ul>
+									
+									</a>
+									<a href="#" target="_self">
+										<ul class="best_product1">
+										
+											<li><img src="img/img_main_contents2bestitem_4.png" width="100%" alt="best상품"></li>
+											<li>뷰리즈 촉촉 립틴트</li>
+										</ul>
+									
+									</a>
+								</div>
+								<a href = "#" target="_blank" id=more>>> 더보기</a>
+									
+							</div>
+						
+							<div id="contents4">
+								<p              id="tit_contents4_title">INSTAGRAM</p>
+									<div id="contents4_box">
+								        <div class="md_pick_banner">
+												<a href="#" target="_self" alt="banner">
+													<img src="img/md_pick.jpg" alt="mdpick상품" width="100%" class="md_pick">
+													
+													<img src="img/md_pick_front.jpg" alt="mdpick상품" width="100%" class="md_pick_front">
+												</a>
+
+										</div>
+										
+                                            <div class="md_pick_banner">
+                                                
+										          <a href="#" target="_self">
+											
+												    <img src="img/md_pick_2.jpg" alt="mdpick상품" width="100%">
+								                    <img src="img/md_pick_front.jpg" alt="mdpick상품" width="100%" class="md_pick_front">
+
+                                                </a>
+											</div>
+										
+										
+											<div class="md_pick_banner">
+                                                
+                                                <a href="#" target="_self">
+												
+                                                    <img src="img/md_pick_3.jpg" alt="mdpick상품" width="100%">
+												    <img src="img/md_pick_front.jpg" alt="mdpick상품" width="100%" class="md_pick_front">
+                                                </a>
+                                                
+											</div>
+										  
+                                            
+                                            <div class="md_pick_banner">
+										          <a href="#" target="_self">
+											
+											
+												
+												    <img src="img/md_pick_4.jpg" alt="mdpick상품" width="100%">
+												    <img src="img/md_pick_front.jpg" alt="mdpick상품" width="100%" class="md_pick_front">
+
+											
+										          </a>
+                                            </div>
+                                    </div>	
+								
+							</div>
+							
+							<img src="img/bnr_line1.jpg" width="100%" alt="다당류 배너" id=bnr_line1>
+						
+							<img src="img/bnr_line1_t.jpg" width="100%" alt="다당류 배너" id=bnr_line1_t>
+						
+					</container>
+					<footer>
+						<div id="footer">
+							<div id="footer_frame">
+								<a href="#" target="_self">
+									<img src="img/logo2.png" width="100%" alt="시드물로고" class="footer_logo">
+								</a>
+										<nav>
+											<ul class="footer_menu">
+												<li><a href="#" target="_self">회사소개</a></li>
+												<li><a href="#" target="_self">이용약관</a></li>	
+												<li><a href="#" target="_self">개인정보처리방침</a></li>
+												<li><a href="#" target="_self">회원가입</a></li>
+												<li><a href="#" target="_self">마이페이지</a></li>
+											</ul>
+										</nav>
+										<address>
+											<p class="company_info">상호. 주식회사 시드물 주소. 대전광역시 중구 안영로 42(안영동) 전화. 1577-9638 
+												(해외 : +82-42-716-0227) 팩스. 042-367-7989 
+												<br>COPYRIGHT (C) 2020 SIDMOOL Kim Gyeongok ALL RIGHTS RESERVED. </p>
+										</address>
+							</div>
+						</div>
+					</footer>
+			</div>
+	</body>
+</html>  

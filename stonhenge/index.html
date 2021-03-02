@@ -1,0 +1,396 @@
+<!DOCTYPE html>  
+<html>
+	<head>
+		<meta charset="utf-8"> 
+				<title>stonehenge</title>
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+							<link rel="shortcut icon" href="img/favicon.ico">
+							<link href="css/index.css" rel="stylesheet" type="text/css">
+             	<link href="css/slick-theme.css" rel="stylesheet" type="text/css"> 
+							<link href="css/slick.css" rel="stylesheet" type="text/css"> 
+								<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+								<script type="text/javascript" src="js/slick.min.js"></script>
+								<script type="text/javascript">
+									$(function(){
+										$('.hamburger-button').on('click', function(event){
+												event.preventDefault();
+
+												$(this).toggleClass('active');
+												$('.overlay').toggleClass('visible');
+
+											});
+										
+										
+										$('#slidebnr_item').slick({
+														
+														dotted: true,
+														infinite: true,
+														speed: 300,
+														slidesToShow: 4,
+														slidesToScroll: 4,
+														autoplay: true,
+  													autoplaySpeed: 3000,
+														responsive: [
+															{
+																	breakpoint: 1024,
+																	settings: {
+																	dots: true,
+																	slidesToShow: 4,
+																	slidesToScroll: 3,
+																	infinite: true,
+																}
+															},
+															{
+																	breakpoint: 768,
+																	settings: {
+																	slidesToShow: 2,
+																	slidesToScroll: 4,
+																}
+															},
+															{
+																	breakpoint: 320,
+																	settings: {
+																	slidesToShow: 2,
+																	slidesToScroll: 1,
+																}
+															}
+														]         
+													});
+									})
+									
+												$(function(){
+
+															if($(this).scrollTop() == 0) {
+																$(".iconbutton").hide();
+															}
+															$(document).scroll(function(){
+																if($(this).scrollTop() > 0) {
+																	$(".iconbutton").show();
+																}
+																else{
+																	$(".iconbutton").hide();
+																}
+																})
+																$(".iconbutton").click(function(){
+																	$("html,body").animate({
+																		scrollTop : 0
+																	},500)
+																})
+												});
+								</script>
+	</head>
+    
+    
+    
+	<body>
+    <div id="wrap">
+     	<header>
+				<div id="head">
+						<a href="#" class="hamburger-button">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>	
+
+						<div class="overlay">
+							<nav class="menu">
+								<ul>
+									<li><a href="#">STONEHENGE</a></li>
+									<li><a href="#">ITEM</a></li>
+									<li><a href="#">EVENT</a></li>
+									<li><a href="#">STYLE</a></li>
+									<li><a href="#">COMMUNITY</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div id="logo">
+							<a href="#" target="_self">
+									<img src="img/sub_logo.png" alt="logo" class="logo">
+							</a>
+						</div>
+					<select class="lang">
+							<option value="kr">KR</option>
+							<option value="en">EN</option>
+							<option value="cn">CN</option>
+					</select>
+						
+					<div id="search_menu">
+							<img src="img/ico_search_1.png" alt="search" id="ico_search">
+					
+					</div>
+
+				</div>
+						
+		 	</header>
+			
+      <container>
+          
+<!--    영상-->
+          
+        <div class="video">
+            <video src="img/stonehenge.mp4" autoplay muted playsinline loop style="width: 100%;height: 100%;display: block"></video>
+        </div>
+        
+      
+<!--contents2-->
+          
+        <div id="contents2">
+          
+							<img src="img/bnr_contents1.jpg" width="100%" alt="beautifulmonments_banner" class="bnr_contents1_m">
+							<img src="img/bnr2_contents1.jpg" width="100%" alt="beautifulmonments_banner" class="bnr_contents1_m">
+					
+							<img src="img/bnr_contents1_tablet.jpg" width="100%" alt="beautifulmonments_banner" class="bnr_contents1_t">
+							<img src="img/bnr_contents1_tablet2.jpg" width="100%" alt="beautifulmonments_banner" class="bnr_contents1_t">
+
+
+							
+				</div>			
+								
+          
+<!--best-->    
+          
+        <div id="contents3">
+            <p id="tit_best">BEST ITEM</p>
+                <div id="slidebnr_item">
+                 	<ul class="best_item">
+                        <a href="#" target="_self">
+                            <li><img src="img/img_main_best_1.png" width="100%" alt="베스트상품1"></li>
+                            <li>Silhouette Collection</li>
+                            <li>14K Rose Gold</li>
+                        </a>
+                 	</ul>
+                    <ul class="best_item">
+                        <a href="#" target="_self">
+                            <li><img src="img/img_main_best_2.png" width="100%" alt="베스트상품2"></li>
+                            <li>She Collection</li>
+                            <li>14K Rose Gold</li>
+                        </a>
+					</ul>
+                <ul class="best_item">
+                        <a href="#" target="_self">
+                            <li><img src="img/img_main_best_3.png" width="100%" alt="베스트상품3"></li>
+                            <li>Honeymoon Collection</li>
+                            <li>14K White Gold</li>
+                        </a>
+                </ul>
+                <ul class="best_item">
+                        <a href="#" target="_self">
+                             <li><img src="img/img_main_best_4.png" width="100%" alt="베스트상품4"></li>
+                             <li>Silhouette Collection</li>
+                             <li>14K White Gold</li>
+                        </a>
+                </ul>
+                <ul class="best_item">
+                        <a href="#" target="_self">
+                              <li><img src="img/img_main_best_5.png" width="100%" alt="베스트상품5"></li>
+                              <li>Swan Wings Collection</li>
+                              <li>14K Rose Gold</li>
+                         </a>
+                </ul>
+                <ul class="best_item">
+                         <a href="#" target="_self">
+                               <li><img src="img/img_main_best_6.png" width="100%" alt="베스트상품6"></li>
+                                <li>Honeymoon Collection</li>
+                                <li>14K White Gold</li>
+                            </a>
+                </ul>
+                 <ul class="best_item">
+                         <a href="#" target="_self">
+                                 <li><img src="img/img_main_best_7.png" width="100%" alt="베스트상품7"></li>
+                                 <li>Honeymoon Collection</li>
+                                 <li>14K White Gold</li>
+                        </a>
+                </ul>
+                <ul class="best_item">
+                       <a href="#" target="_self">
+                                <li><img src="img/img_main_best_8.png" width="100%" alt="베스트상품6"></li>
+                                <li>Honeymoon Collection</li>
+                                <li>14K White Gold</li>
+                        </a>
+                </ul>
+            </div>
+          </div>
+
+          
+<!--Event-->
+         <p id="tit_ad">EVENT</p>	
+          	<div id="contents4">
+              
+				    <div class="contents4_2">
+				        <div id="event_banner">
+				            <video src="img/lucky_video.mp4" loop autoplay muted>
+				            </video>
+                        </div>
+
+				        <a href="#" target="_self">  
+				            <div id="event_banner2">
+				                <img src="img/christmas_present.jpg" width="100%">
+
+				            </div>
+				        </a>
+
+				        <a href="#" target="_self">
+						  <div id="event_banner3">
+							     <img src="img/sale.jpg" width="100%" alt="이벤트배너">
+				            </div>
+						</a>
+				        <a href="#" target="_self">
+				            <div id="event_banner4">
+								<img src="img/blackprice.jpg" width="100%" alt="이벤트배너">
+							</div>
+						</a>
+
+				    </div>
+            </div>
+          
+          
+<!--해시태그-->
+          
+			<div id=contents5>
+					<p id="tit_hashtag">#HASHTAG</p>
+						
+				 			<div id=contents5_2>
+               
+                    <ul class=hashtag>
+						
+											<li><a href="#" target="_self">#크리스마스 선물</a></li>
+											
+                        <li><a href="#" target="_self">#S-LINK</a></li>
+                        <li><a href="#" target="_self">#겨울 신상품</a>
+												</li>
+                       	<li><a href="#" target="_self">#뷰티풀모먼츠</a></li>
+										
+                    </ul>
+									
+				    			<ul class=hashtag>
+						
+				       					<li><a href="#" target="_self">#연말 할인</a></li>
+                        <li><a href="#" target="_self">#Luckey You</a></li>
+												<li><a href="#" target="_self">#수험생 할인</a></li>
+												<li><a href="#" target="_self">#웨딩 링</a></li>
+										
+									</ul>				
+							</div>
+            </div>
+          
+<!--스타착용컷-->
+          
+            <div id="contents6">
+					    
+                <p id="tit_wear_img">STYLE</p>
+						
+						<div id="collection_box">
+							
+				            <div class="collection">
+									<a href="#colletion1" target="_blank">
+										<img src="img/collection1_1.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection1.jpg" width="100%" alt="collection1" class="product_front">
+									</a>	
+				            </div> 
+						
+							
+								<div class="collection">
+									<a href="#colletion2" target="_blank">
+										<img src="img/collection2_2.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection2.jpg" width="100%" alt="collection2" class="product_front">
+									</a>	
+								</div>
+							
+							
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+										<img src="img/collection3_3.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection3.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+
+										<img src="img/collection4_4.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection4.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							
+								<div class="collection">
+									<a href="#colletion1" target="_blank">
+
+										<img src="img/collection5_5.jpg" width="100%" alt="collection1_product" class="product">
+											<img src="img/collection5.jpg" width="100%" alt="collection1" class="product_front">
+									</a>		
+								</div>
+							
+						
+								<div class="collection">
+									<a href="#colletion2" target="_blank">
+										<img src="img/collection6_6.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection6.jpg" width="100%" alt="collection2" class="product_front">
+									</a>
+								</div>
+							
+						
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+										<img src="img/collection7_7.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection7.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							  
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+										<img src="img/collection8_8.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection8.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+
+									<img src="img/collection9_9.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection9.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							
+                      
+								<div class="collection">
+									<a href="#colletion3" target="_blank">
+										<img src="img/collection10_10.jpg" width="100%" alt="collection1_product" class="product">
+										<img src="img/collection10.jpg" width="100%" alt="collection3" class="product_front">
+									</a>
+								</div>
+							
+						</div>
+					</div>
+  	</container>
+        
+<!--푸터-->
+        
+    <footer>
+        
+        <div id="footer">
+            <ul id="footer_menu">
+					<li><a href="#footer_menu" target="_blank">이용약관 ｜</a></li>
+							<li><a href="#footer_menu2" target="_blank">개인정보처리방침 ｜</a></li>
+							<li><a href="#footer_menu4" target="_blank">멤버십 </a></li>
+            </ul>
+				    <p id="address">서울시 동작구 신대방동 395-70 (보라매로5길 15) 전문건설회관 23층 우림 FMG ｜A/S Center 1644-7313 ｜Telephone 080-3284-1300<br>
+								Fax 02-3284-1330｜주얼리 A/S문의 02)6948-3197~9 ｜시계 A/S문의 1644-7313｜온라인몰 문의 02)6948-3191｜면세 A/S 문의 02)6948-3139</p>
+						<div id="ico_sns_box">
+								<a href="https://www.facebook.com/stonehengekorea" target="_blank">
+								<img src="img/sns1.png" width="100%" alt="facebook"></a>
+								<a href="https://www.instagram.com/stonehenge_official/" target="_blank">
+								<img src="img/sns2.png" width="100%" alt="insta">
+								</a>
+								<a href="https://www.youtube.com/user/stonehengekorea" target="_blank">
+								<img src="img/sns3.png" width="100%" alt="youtube">
+								</a>
+								<a href="http://www.stonehengeblog.co.kr/" target="_blank">
+								<img src="img/sns4.png" width="100%" alt="blog">
+								</a>
+						</div>
+					</div>
+			</footer>	
+			</div>
+	</body>
+</html>  
